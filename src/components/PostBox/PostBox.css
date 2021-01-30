@@ -1,0 +1,30 @@
+.post-card {
+    background: #262626 !important;
+    color: #fff;
+    border-radius: 10px !important;
+}
+
+.thumb {
+    border-radius: 13px !important;
+}
+
+.category {
+    color: #fff636;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 1.2rem;
+    font-weight: bold !important;
+    border-radius: 5px;
+    
+    cursor: pointer;
+    transition: color .5s ease-out;
+    }
+
+.category:hover {
+    color: #fff;
+}
+
+.title {
+    letter-spacing: 0.05em;
+    font-weight: 300 !important;
+}
