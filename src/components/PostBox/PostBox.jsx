@@ -3,7 +3,7 @@ import './PostBox.css';
 
 function PostBox(props) {
   return (
-      <Card className="post-card hvr-grow">
+      <Card className="post-card hvr-grow animate__slideInDown">
         <img src={props.img} className="p-2 mb-n3 thumb"/>
         <Card.Body>
         <a href={props.categoryLink} className="category p-1">{props.category}</a>
