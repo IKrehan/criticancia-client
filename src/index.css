@@ -3,9 +3,8 @@
 body {
   margin: 0;
 
-  background: rgb(23,26,28);
-  background: linear-gradient(315deg, rgba(25,29,32,1) 10%, rgba(23,26,28,1) 90%);
-  min-height: 100vh;
+  background: rgb(40,43,43);
+  background: linear-gradient(315deg, rgba(40,43,43,1) 10%, rgba(18,18,20,1) 90%);  min-height: 100vh;
   font-size: calc(10px + 2vmin);
   color: white;
 

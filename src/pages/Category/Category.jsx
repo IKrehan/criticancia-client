@@ -3,7 +3,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import NavBar from '../../components/NavBar/Navbar';
 import PostBox from '../../components/PostBox/PostBox';
 import Thumb from '../../assets/imgs/thumb.jpg';
-import SectionHeader from '../../components/SectionHeader/SectionHeader';
 
 const posts = [
   {
@@ -71,34 +70,11 @@ const posts = [
   },
 ]
 
-function Homepage() {
+function Category(props) {
   return (
     <div>
       <Container fluid>
-        <NavBar />
-
-        <Row className='m-5'>
-          <Col className='m-4'>
-            <PostBox 
-              category='Filmes' 
-              title='Title goes here!' 
-              img={Thumb} 
-              id="1" 
-              categoryLink='/filmes' 
-            />
-          </Col>
-
-          <Col className='m-4'>
-            <PostBox 
-              category='Filmes' 
-              title='Title goes here!' 
-              img={Thumb} id="1" 
-              categoryLink='/filmes'
-            />
-          </Col>
-        </Row>
-
-        <SectionHeader title="Last News" />
+        <NavBar category={props.category} />
 
         <Row className="m-5">
         {
@@ -121,4 +97,4 @@ function Homepage() {
   );
 }
 
-export default Homepage;
+export default Category;

@@ -24,4 +24,17 @@
   }
 .btn-nav:hover:after { 
     width: 70%; 
-  }
+}
+
+
+.nav-active {
+  color: #fff636; 
+}
+
+.nav-active::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background: #fff636;
+  width: 70%; 
+}
