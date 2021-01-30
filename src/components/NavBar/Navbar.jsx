@@ -22,7 +22,7 @@ function NavBar(props) {
             <Row className='d-flex justify-content-start'>
                 <Col md={2} className="mr-3">
                     <a href="/" className="d-inline-md">
-                        <img src={Logo} className="logo"/>
+                        <img src={Logo} alt='Logo' className="logo"/>
                     </a>
                 </Col>
 

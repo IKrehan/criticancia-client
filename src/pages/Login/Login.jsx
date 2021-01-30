@@ -9,7 +9,7 @@ function Login() {
     <Row className="parent">
         <Col md={3} className='mx-2 logoBox'>
             <div className=''>
-                <img className="logo d-inline" src={Logo}/>
+                <img alt='Logo' className="logo d-inline" src={Logo}/>
                 <h1 className='d-inline align-bottom bold'>riticância</h1>
             </div>
             <h4 className='mt-5'>Faça o login para acessar a área de administração.</h4>
