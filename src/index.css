@@ -4,7 +4,6 @@ body {
   margin: 0;
 
   background: rgb(18,18,20,1) !important;
-  font-size: calc(10px + 2vmin);
   color: white;
 
   font-family: 'Montserrat', sans-serif !important;
@@ -23,7 +22,6 @@ a {
 
 /* Grow */
 .hvr-grow {
-  display: inline-block;
   vertical-align: middle;
   transform: translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
