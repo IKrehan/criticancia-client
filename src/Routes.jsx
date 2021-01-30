@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import Category from './pages/Category/Category';
 
 import Homepage from './pages/Homepage/Homepage';
+import Login from './pages/Login/Login';
 
 function Routes() {
   return (
@@ -25,10 +26,7 @@ function Routes() {
         <Category category='Games'/>
       </Route>
 
-      <Route path="/admin">
-        <h1>Adm Login</h1>
-      </Route>
-
+      <Route path="/admin" exact component={Login} />
     </Switch>
   );
 }
