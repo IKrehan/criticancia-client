@@ -1,0 +1,28 @@
+.btn-nav:active, .btn-nav:hover {
+    color: #fff636;
+}
+
+
+
+.btn-nav {
+    color: #7c7c7c;
+    transition: color .3s ease-out;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    letter-spacing: 0.15em;
+    
+    display: inline-block;
+  }
+
+  a:after {    
+    content: "";
+    display: block;
+    height: 1px;
+    background: #fff636;
+
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 25%;
+  }
+  a:hover:after { 
+    width: 70%; 
+  }
