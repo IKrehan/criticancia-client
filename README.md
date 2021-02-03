@@ -2,7 +2,7 @@
 Criticância is a News Website focused on geek/nerd culture. 
 
 ## Live Version ✔
-In this link you can access the website: [criticancia]()
+In this link you can access the website: [https://criticancia-client.vercel.app/](https://criticancia-client.vercel.app/)
 
 ## Tools 🔧
 
@@ -13,10 +13,9 @@ Criticância is developed with this:
 * [Sequelize](https://sequelize.org/) - The streaming build system
 * [node.js](https://nodejs.org/) - Evented I/O for the backend
 
+### Backend
+The api feeding this client can be seen here: (https://github.com/IKrehan/criticancia-api)[https://github.com/IKrehan/criticancia-api]
 
-## Todos 📃
-
- 🚧 **Work In Progress** 🚧
  
 
 License
