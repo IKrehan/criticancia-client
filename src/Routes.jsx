@@ -11,19 +11,19 @@ function Routes() {
       <Route path="/" exact component={Homepage} />
       
       <Route path="/criticast">
-        <Category category='CritiCast'/>
+        <Category category='criticast'/>
       </Route>
 
       <Route path="/series">
-        <Category category='Séries'/>
+        <Category category='series'/>
       </Route>
 
       <Route path="/filmes">
-        <Category category='Filmes'/>
+        <Category category='filmes'/>
       </Route>
 
       <Route path="/games">
-        <Category category='Games'/>
+        <Category category='games'/>
       </Route>
 
       <Route path="/admin" exact component={Login} />
