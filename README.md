@@ -14,7 +14,7 @@ Criticância is developed with this:
 * [node.js](https://nodejs.org/) - Evented I/O for the backend
 
 ### Backend
-The api feeding this client can be seen here: (https://github.com/IKrehan/criticancia-api)[https://github.com/IKrehan/criticancia-api]
+The api feeding this client can be seen here: [https://github.com/IKrehan/criticancia-api](https://github.com/IKrehan/criticancia-api)
 
  
 
