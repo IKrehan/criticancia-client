@@ -26,21 +26,21 @@ function Category(props) {
 
   return isLoaded ? (
     <div
-      className="mt-n3"
+      className="home-box mt-n3 w-100"
       style={{
         backgroundImage: `url(${Shape})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "contain",
       }}
     >
-      <Container className="pt-4" fluid>
+      <Container className="pt-4 w-100 position-relative" fluid>
         <NavBar category={props.category} />
         <Feed posts={posts} />
       </Container>
     </div>
   ) : (
     <div
-      className="mt-n3"
+      className="home-box mt-n3 w-100"
       style={{
         backgroundImage: `url(${Shape})`,
         backgroundRepeat: "no-repeat",

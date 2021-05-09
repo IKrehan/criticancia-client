@@ -40,7 +40,7 @@ function Homepage() {
       <Container className="pt-4 w-100 position-relative" fluid>
         <NavBar />
 
-        <Row className="m-5">
+        <Row className="m-4">
           {postsHome.slice(0, 2).map((post) => {
             return (
               <Col className="m-5">
@@ -50,6 +50,7 @@ function Homepage() {
                   img={post.thumbnail}
                   id={post.id}
                   categoryLink={post.categoryPath}
+                  thumbType="bg"
                 />
               </Col>
             );

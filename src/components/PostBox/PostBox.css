@@ -9,6 +9,11 @@
   height: 18em !important;
 }
 
+.thumb-bg {
+  border-radius: 13px !important;
+  height: 34em !important;
+}
+
 .category {
   color: #fff636;
   text-transform: uppercase;
