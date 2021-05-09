@@ -1,28 +1,26 @@
 import { useState, useEffect } from "react";
+import { useParams } from "react-router";
+import { Container } from "react-bootstrap";
 import axios from "axios";
-import "./Homepage.css";
 
-import { Container, Row, Col } from "react-bootstrap";
-
+import "./Post.css";
 import NavBar from "../../components/NavBar/Navbar";
-import PostBox from "../../components/PostBox/PostBox";
 import Shape from "../../assets/imgs/shape.svg";
-import SectionHeader from "../../components/SectionHeader/SectionHeader";
-import Feed from "../../components/Feed/Feed";
 import Loading from "../../components/Loading/Loading";
 
-function Homepage() {
+function Post() {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [postsHome, setPostsHome] = useState([]);
+  const [post, setPost] = useState();
+  const { slug } = useParams();
 
   useEffect(() => {
     axios
-      .get(`https://criticancia-api.herokuapp.com/api/news/`, {
+      .get(`https://criticancia-api.herokuapp.com/api/news/${slug}`, {
         Accept: "application/json",
         "Content-Type": "application/x-www-form-urlencoded",
       })
       .then((response) => {
-        setPostsHome(response.data.data);
+        setPost(response.data.data);
         setIsLoaded(true);
       })
       .catch((error) => console.log(error));
@@ -39,28 +37,7 @@ function Homepage() {
     >
       <Container className="pt-4 w-100 position-relative" fluid>
         <NavBar />
-
-        <Row className="m-4">
-          {postsHome.slice(0, 2).map((post) => {
-            return (
-              <Col className="m-5">
-                <PostBox
-                  category={post.category}
-                  title={post.title}
-                  slug={post.slug}
-                  img={post.thumbnail}
-                  id={post.id}
-                  categoryLink={post.categoryPath}
-                  thumbType="bg"
-                />
-              </Col>
-            );
-          })}
-        </Row>
-
-        <SectionHeader title="Last News" />
-
-        <Feed posts={postsHome.slice(2)} />
+        <h1>{post.title}</h1>
       </Container>
     </div>
   ) : (
@@ -82,4 +59,4 @@ function Homepage() {
   );
 }
 
-export default Homepage;
+export default Post;
