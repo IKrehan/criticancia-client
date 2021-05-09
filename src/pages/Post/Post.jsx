@@ -24,7 +24,7 @@ function Post() {
         setIsLoaded(true);
       })
       .catch((error) => console.log(error));
-  }, []);
+  }, [slug]);
 
   return isLoaded ? (
     <div
