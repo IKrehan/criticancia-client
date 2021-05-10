@@ -13,10 +13,13 @@ function Category(props) {
 
   useEffect(() => {
     axios
-      .get(`https://criticancia-api.herokuapp.com/api/news/${props.category}`, {
-        Accept: "application/json",
-        "Content-Type": "application/x-www-form-urlencoded",
-      })
+      .get(
+        `https://criticancia-api.herokuapp.com/api/news/byCategory/${props.category}`,
+        {
+          Accept: "application/json",
+          "Content-Type": "application/x-www-form-urlencoded",
+        }
+      )
       .then((response) => {
         setPosts(response.data.data);
         setIsLoaded(true);
