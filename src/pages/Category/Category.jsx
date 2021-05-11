@@ -6,17 +6,20 @@ import Shape from "../../assets/imgs/shape.svg";
 import { useState, useEffect } from "react";
 import Feed from "../../components/Feed/Feed";
 import Loading from "../../components/Loading/Loading";
+import { useParams } from "react-router";
 
 function Category(props) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [posts, setPosts] = useState({});
+
+  const { category } = useParams();
 
   useEffect(() => {
     setPosts({});
     setIsLoaded(false);
     axios
       .get(
-        `https://criticancia-api.herokuapp.com/api/news/?category=${props.category}`,
+        `https://criticancia-api.herokuapp.com/api/news/?category=${category}`,
         {
           Accept: "application/json",
           "Content-Type": "application/x-www-form-urlencoded",
@@ -27,7 +30,7 @@ function Category(props) {
         setIsLoaded(true);
       })
       .catch((error) => console.log(error));
-  }, [props]);
+  }, [category]);
 
   return isLoaded ? (
     <div

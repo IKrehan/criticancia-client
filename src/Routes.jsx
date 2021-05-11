@@ -10,23 +10,7 @@ function Routes() {
   return (
     <Switch>
       <Route path="/" exact component={Homepage} />
-
-      <Route path="/criticast">
-        <Category category="criticast" />
-      </Route>
-
-      <Route path="/series">
-        <Category category="series" />
-      </Route>
-
-      <Route path="/filmes">
-        <Category category="filmes" />
-      </Route>
-
-      <Route path="/games">
-        <Category category="games" />
-      </Route>
-
+      <Route path="/:category" component={Category} />
       <Route path="/post/:slug" component={Post} />
       <Route path="/admin" exact component={Login} />
     </Switch>
