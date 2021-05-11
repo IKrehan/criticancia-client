@@ -9,7 +9,7 @@ function PostBox({ title, slug, img, category, categoryLink, onFeed = false }) {
           onFeed ? "post-feed" : ""
         } `}
       >
-        <img src={img} alt="Thumbnail" className={`p-2 mb-n3 thumb$`} />
+        <img src={img} alt="Thumbnail" className={`p-2 mb-n3 thumb`} />
         <Card.Body>
           <a href={categoryLink} className="category p-1">
             {category}
