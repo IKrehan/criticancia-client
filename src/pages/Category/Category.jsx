@@ -9,12 +9,14 @@ import Loading from "../../components/Loading/Loading";
 
 function Category(props) {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState({});
 
   useEffect(() => {
+    setPosts({});
+    setIsLoaded(false);
     axios
       .get(
-        `https://criticancia-api.herokuapp.com/api/news/byCategory/${props.category}`,
+        `https://criticancia-api.herokuapp.com/api/news/?category=${props.category}`,
         {
           Accept: "application/json",
           "Content-Type": "application/x-www-form-urlencoded",
@@ -38,7 +40,7 @@ function Category(props) {
     >
       <Container className="pt-4 w-100 position-relative" fluid>
         <NavBar category={props.category} />
-        <Feed posts={posts} />
+        <Feed posts={posts.news} />
       </Container>
     </div>
   ) : (

@@ -14,15 +14,34 @@ import Loading from "../../components/Loading/Loading";
 function Homepage() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [postsHome, setPostsHome] = useState([]);
+  const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     axios
-      .get(`https://criticancia-api.herokuapp.com/api/news/`, {
-        Accept: "application/json",
-        "Content-Type": "application/x-www-form-urlencoded",
-      })
+      .get(
+        `https://criticancia-api.herokuapp.com/api/news?perPage=2&currentPage=1`,
+        {
+          Accept: "application/json",
+          "Content-Type": "application/x-www-form-urlencoded",
+        }
+      )
       .then((response) => {
-        setPostsHome(response.data.data);
+        setPostsHome(response.data.data.news);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(
+        `https://criticancia-api.herokuapp.com/api/news?perPage=10&currentPage=1`,
+        {
+          Accept: "application/json",
+          "Content-Type": "application/x-www-form-urlencoded",
+        }
+      )
+      .then((response) => {
+        setPosts(response.data.data);
         setIsLoaded(true);
       })
       .catch((error) => console.log(error));
@@ -45,12 +64,12 @@ function Homepage() {
             return (
               <Col sm={6} className="mx-auto">
                 <PostBox
-                  category={post.category}
+                  category={post.category.title}
                   title={post.title}
                   slug={post.slug}
                   img={post.thumbnail}
                   id={post.id}
-                  categoryLink={post.categoryPath}
+                  categoryLink={post.category.path}
                   thumbType="bg"
                 />
               </Col>
@@ -60,7 +79,7 @@ function Homepage() {
 
         <SectionHeader title="Last News" />
 
-        <Feed posts={postsHome.slice(2)} />
+        <Feed posts={posts.news} />
       </Container>
     </div>
   ) : (
