@@ -17,15 +17,15 @@ function NavBar(props) {
       <Col className="mt-2 pr-5">
         <Row>
           <Col>
-            <NavButton title="Filmes" link="/filmes" />
+            <NavButton title="Filmes" link="/category/filmes" />
           </Col>
 
           <Col>
-            <NavButton title="Séries e TV" link="/series-e-tv" />
+            <NavButton title="Séries e TV" link="/category/series-e-tv" />
           </Col>
 
           <Col>
-            <NavButton title="Games" link="/games" />
+            <NavButton title="Games" link="/category/games" />
           </Col>
         </Row>
       </Col>
