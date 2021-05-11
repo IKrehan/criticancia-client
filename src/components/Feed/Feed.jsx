@@ -13,8 +13,10 @@ function Feed(props) {
               id={post.id}
               category={post.category.title}
               title={post.title}
+              slug={post.slug}
               img={post.thumbnail}
               categoryLink={post.category.path}
+              onFeed={true}
             />
           </Col>
         );

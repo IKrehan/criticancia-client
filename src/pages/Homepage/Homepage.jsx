@@ -56,22 +56,23 @@ function Homepage() {
         backgroundSize: "contain",
       }}
     >
-      <Container className="pt-4 w-100 position-relative" fluid>
+      <Container className="pt-4 px-5 w-100 position-relative" fluid>
         <NavBar />
 
-        <Row className="m-5 mx-auto">
+        <Row className="px-4 pb-5 mx-auto">
           {postsHome.slice(0, 2).map((post) => {
             return (
               <Col sm={6} className="mx-auto">
-                <PostBox
-                  category={post.category.title}
-                  title={post.title}
-                  slug={post.slug}
-                  img={post.thumbnail}
-                  id={post.id}
-                  categoryLink={post.category.path}
-                  thumbType="bg"
-                />
+                <div className="mx-3">
+                  <PostBox
+                    category={post.category.title}
+                    title={post.title}
+                    slug={post.slug}
+                    img={post.thumbnail}
+                    id={post.id}
+                    categoryLink={post.category.path}
+                  />
+                </div>
               </Col>
             );
           })}

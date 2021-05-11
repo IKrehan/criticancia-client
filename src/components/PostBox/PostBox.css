@@ -4,14 +4,12 @@
   border-radius: 5px !important;
 }
 
-.thumb {
-  border-radius: 13px !important;
-  height: 16em !important;
+.post-feed {
+  height: 23rem !important;
 }
 
-.thumb-bg {
+.thumb {
   border-radius: 13px !important;
-  height: 30em !important;
 }
 
 .category {
@@ -35,7 +33,6 @@
   letter-spacing: 0.05em;
   font-size: 1.2em;
   font-weight: 300 !important;
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
