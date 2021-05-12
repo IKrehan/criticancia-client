@@ -56,7 +56,10 @@ function Homepage() {
         backgroundSize: "contain",
       }}
     >
-      <Container className="pt-4 px-5 w-100 position-relative" fluid>
+      <Container
+        className="pt-4 px-5 w-100 position-relative home-container"
+        fluid
+      >
         <NavBar />
 
         <Row className="px-4 pb-5 mx-auto">
