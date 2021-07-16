@@ -1,0 +1,40 @@
+.btn-nav:active, .btn-nav:hover {
+    color: #fff636;
+}
+
+
+
+.btn-nav {
+    color: #7c7c7c;
+    transition: color .3s ease-out;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    
+    display: inline-block;
+  }
+
+.btn-nav:after {    
+    content: "";
+    display: block;
+    height: 1px;
+    background: #fff636;
+
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 25%;
+  }
+.btn-nav:hover:after { 
+    width: 70%; 
+}
+
+
+.nav-active {
+  color: #fff636; 
+}
+
+.nav-active::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background: #fff636;
+  width: 70%; 
+}

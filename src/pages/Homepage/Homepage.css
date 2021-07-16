@@ -1,0 +1,17 @@
+.home-box {
+  height: 100vh;
+}
+
+.load-box {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width: 2560px) {
+  .home-container {
+    max-width: 65%;
+  }
+}

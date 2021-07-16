@@ -1,0 +1,38 @@
+.post-card {
+  background: rgb(32, 32, 36) !important;
+  color: #fff;
+  border-radius: 5px !important;
+}
+
+.post-feed {
+  height: 24rem !important;
+}
+
+.thumb {
+  border-radius: 13px !important;
+}
+
+.category {
+  color: #fff636;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 1.2rem;
+  font-weight: bold !important;
+  border-radius: 5px;
+
+  cursor: pointer;
+  transition: color 0.5s ease-out;
+}
+
+.category:hover {
+  color: #fff;
+}
+
+.title {
+  color: #fff;
+  letter-spacing: 0.05em;
+  font-size: 1.2em;
+  font-weight: 300 !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
