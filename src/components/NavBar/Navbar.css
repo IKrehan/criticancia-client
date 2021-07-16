@@ -33,7 +33,10 @@
 
 .button {
   background-color: rgb(18, 18, 20, 1);
+}
 
+.button:a {
+  color: #fff;
 }
 
 .button-none {
