@@ -57,16 +57,16 @@ function Homepage() {
       }}
     >
       <Container
-        className="pt-4 px-5 w-100 position-relative home-container"
+        className="pt-4 px-lg-5 w-100 position-relative home-container"
         fluid
       >
         <NavBar />
 
-        <Row className="px-4 pb-5 mx-auto">
+        <Row className="px-lg-4 pb-5 mx-lg-auto">
           {postsHome.slice(0, 2).map((post) => {
             return (
               <Col sm={6} className="mx-auto">
-                <div className="mx-3">
+                <div className="mx-lg-3 my-2 my-lg-0">
                   <PostBox
                     category={post.category.title}
                     title={post.title}

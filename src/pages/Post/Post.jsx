@@ -37,7 +37,7 @@ function Post() {
     >
       <Container className="pt-4 w-100 position-relative" fluid>
         <NavBar />
-        <div className="m-5">
+        <div className="m-lg-5">
           <div className="mt-5">
             <h3 className="text-white text-center text-wrap fw-bold">
               {post.title}
@@ -47,13 +47,13 @@ function Post() {
             </div>
             <div className="mx-auto my-4">
               <img
-                className="rounded mx-auto d-block"
+                className="rounded mx-auto d-block img-fluid"
                 src={post.thumbnail}
                 alt={post.slug}
               />
             </div>
-            <div className="mx-5">
-              <div className="text-center mx-auto text-wrap w-75 text-white">
+            <div className="mx-lg-5 mb-5">
+              <div className="text-center mx-lg-auto text-wrap w--lg75 text-white">
                 {post.content}
               </div>
             </div>
